@@ -47,5 +47,9 @@ function createTable(tableData) {
 
     myTable.appendChild(table);
 }
+const addBook = document.querySelector("#add-book");
+addBook.addEventListener("click", function (e) {
+    window.dialog.showModal();
+});
 
 createTable(myLibrary);
