@@ -42,8 +42,25 @@ function displayBooks() {
         let isRead = document.createElement("td");
         let readStatusCheckbox = document.createElement("input");
         readStatusCheckbox.setAttribute("type", "checkbox");
+
+        let removeButtonContainer = document.createElement("td");
+        let removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.setAttribute("data-index", `${myLibrary.indexOf(book)}`)
+        removeButtonContainer.appendChild(removeButton);
+        row.appendChild(removeButtonContainer);
+
+        myTable.appendChild(row);
+
+        removeButton.addEventListener("click", removeBook);
     }
 }
+
+function removeBook(e) {
+    myLibrary.splice(e.currentTarget.dataset.index, 1);
+    displayBooks();
+}
+
 const addBook = document.querySelector("#add-book");
 addBook.addEventListener("click", () => {
     window.dialog.showModal();
