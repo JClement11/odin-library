@@ -8,27 +8,14 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary() {
-
+    let title = document.querySelector("#title").value;
+    let author = document.querySelector("#author").value;
+    let pages = document.querySelector("#pages").value;
+    let read = document.querySelector('input[name="read"]:checked').value;
+    let newBook = new Book(title, author, pages, read);
+    myLibrary.push(newBook);
+    displayBooks();
 }
-
-let myTable = document.querySelector("#table");
-
-function createTable(tableData) {
-    let table = document.createElement("table");
-    let headerRow = document.createElement("tr");
-
-    let headers = ["Title", "Author", "Pages", "Read?"];
-
-    headers.forEach(headerText => {
-        let header = document.createElement("th");
-        let textNode = document.createTextNode(headerText);
-        header.appendChild(textNode);
-        headerRow.appendChild(header);
-    });
-
-    table.appendChild(headerRow);
-
-    tableData.forEach(data => {
         let row = document.createElement("tr");
 
         Object.values(data).forEach(text => {
@@ -44,8 +31,13 @@ function createTable(tableData) {
     myTable.appendChild(table);
 }
 const addBook = document.querySelector("#add-book");
-addBook.addEventListener("click", function (e) {
+addBook.addEventListener("click", () => {
     window.dialog.showModal();
 });
 
-createTable(myLibrary);
+const submit = document.querySelector("#submit");
+submit.addEventListener("click", function (e) {
+    addBookToLibrary();
+    window.dialog.close();
+    e.preventDefault();
+});
