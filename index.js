@@ -16,19 +16,33 @@ function addBookToLibrary() {
     myLibrary.push(newBook);
     displayBooks();
 }
+
+let myTable = document.querySelector("table#table");
+
+function displayBooks() {
+    while (myTable.children.length > 1) {
+        myTable.removeChild(myTable.lastElementChild);
+    }
+
+    for (let book of myLibrary) {
         let row = document.createElement("tr");
 
-        Object.values(data).forEach(text => {
-            let cell = document.createElement("td");
-            let textNode = document.createTextNode(text);
-            cell.appendChild(textNode);
-            row.appendChild(cell);
-        });
+        let title = document.createElement("td");
+        title.textContent = book.title;
+        row.appendChild(title);
 
-        table.appendChild(row);
-    });
+        let author = document.createElement("td");
+        author.textContent = book.author;
+        row.appendChild(author);
 
-    myTable.appendChild(table);
+        let pages = document.createElement("td");
+        pages.textContent = book.pages;
+        row.appendChild(pages);
+
+        let isRead = document.createElement("td");
+        let readStatusCheckbox = document.createElement("input");
+        readStatusCheckbox.setAttribute("type", "checkbox");
+    }
 }
 const addBook = document.querySelector("#add-book");
 addBook.addEventListener("click", () => {
