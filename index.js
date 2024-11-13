@@ -42,6 +42,9 @@ function displayBooks() {
         let isRead = document.createElement("td");
         let readStatusCheckbox = document.createElement("input");
         readStatusCheckbox.setAttribute("type", "checkbox");
+        (book.isRead === "yes") ? readStatusCheckbox.setAttribute("checked", "") : readStatusCheckbox.removeAttribute('checked');
+        isRead.appendChild(readStatusCheckbox);
+        row.appendChild(isRead);
 
         let removeButtonContainer = document.createElement("td");
         let removeButton = document.createElement("button");
