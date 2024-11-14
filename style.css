@@ -2,8 +2,20 @@ td, th {
   border: 1px solid black;
   padding: 5px;
   text-align: center;
-  }
+}
 
 table {
   border-collapse: collapse;
+}
+
+tr:nth-child(odd) td {
+  background-color: #E6C79C;
+}
+
+tr:nth-child(even) td {
+  background-color: #CDDFA0;
+}
+
+#header-row {
+  background-color: #6FD08C;
 }
