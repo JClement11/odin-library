@@ -4,6 +4,6 @@ td, th {
   text-align: center;
   }
 
-  table tr td:last-child {
-    border: none;
-    }
+table {
+  border-collapse: collapse;
+}
