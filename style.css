@@ -19,3 +19,9 @@ tr:nth-child(even) td {
 #header-row {
   background-color: #6FD08C;
 }
+
+tr td.button-container {
+  border: none;
+  background-color: transparent;
+}
+
