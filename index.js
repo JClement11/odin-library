@@ -39,12 +39,12 @@ function displayBooks() {
         pages.textContent = book.pages;
         row.appendChild(pages);
 
-        let isRead = document.createElement("td");
+        let read = document.createElement("td");
         let readStatusCheckbox = document.createElement("input");
         readStatusCheckbox.setAttribute("type", "checkbox");
-        (book.isRead === "yes") ? readStatusCheckbox.setAttribute("checked", "") : readStatusCheckbox.removeAttribute('checked');
-        isRead.appendChild(readStatusCheckbox);
-        row.appendChild(isRead);
+        (book.read === "Yes") ? readStatusCheckbox.setAttribute("checked", "") : readStatusCheckbox.removeAttribute("checked");
+        read.appendChild(readStatusCheckbox);
+        row.appendChild(read);
 
         let removeButtonContainer = document.createElement("td");
         removeButtonContainer.classList.add("button-container");
