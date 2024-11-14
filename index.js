@@ -74,5 +74,6 @@ const submit = document.querySelector("#submit");
 submit.addEventListener("click", function (e) {
     addBookToLibrary();
     window.dialog.close();
+    document.querySelector("form").reset();
     e.preventDefault();
 });
