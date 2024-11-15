@@ -6,6 +6,7 @@ td, th {
 
 table {
   border-collapse: collapse;
+  width: 75%;
 }
 
 tr:nth-child(odd) td {
@@ -25,3 +26,14 @@ tr td.button-container {
   background-color: transparent;
 }
 
+#title-header, #author-header {
+  width: 30%;
+}
+
+#pages-header {
+  width: 20%;
+}
+
+#read-header {
+  width: 10%;
+}
