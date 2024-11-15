@@ -59,6 +59,7 @@ tr td.button-container {
 
 .remove-button {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #FF7477;
 }
 
 #add-book {
@@ -67,4 +68,5 @@ tr td.button-container {
   margin-top: 1rem;
   margin-left: 37.5%;
   padding: .5rem;
+  background-color: #BC9EC1;
 }
