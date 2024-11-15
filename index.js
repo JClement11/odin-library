@@ -49,6 +49,7 @@ function displayBooks() {
         let removeButtonContainer = document.createElement("td");
         removeButtonContainer.classList.add("button-container");
         let removeButton = document.createElement("button");
+        removeButton.classList.add("remove-button");
         removeButton.textContent = "Remove";
         removeButton.setAttribute("data-index", `${myLibrary.indexOf(book)}`)
         removeButtonContainer.appendChild(removeButton);
