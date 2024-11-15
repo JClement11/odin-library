@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "dataFont";
+  src: url(fonts/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf);
+}   
+@font-face {
+  font-family: "HeadingFont";
+  src: url(fonts/Walter_Turncoat/WalterTurncoat-Regular.ttf);
+}  
+
+th {
+  font-family: "HeadingFont";
+  font-size: 2em;
+}
+
+td {
+  font-family: "dataFont";
+  font-size: 1.5rem;
+}
+
 td, th {
   border: 1px solid black;
   padding: .3rem;
@@ -36,4 +55,12 @@ tr td.button-container {
 
 #read-header {
   width: 10%;
+}
+
+.remove-button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#add-book {
+  font-family: "headingFont";
 }
