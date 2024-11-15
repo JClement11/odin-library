@@ -63,4 +63,8 @@ tr td.button-container {
 
 #add-book {
   font-family: "headingFont";
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 37.5%;
+  padding: .5rem;
 }
