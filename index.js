@@ -73,10 +73,10 @@ addBook.addEventListener("click", () => {
     window.dialog.showModal();
 });
 
-const submit = document.querySelector("#submit");
-submit.addEventListener("click", function (e) {
+const form = document.querySelector("form");
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
     addBookToLibrary();
     window.dialog.close();
-    document.querySelector("form").reset();
-    e.preventDefault();
+    form.reset();
 });
